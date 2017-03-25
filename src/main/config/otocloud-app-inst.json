@@ -1,0 +1,40 @@
+{
+	"main": "otocloud.app.inst.AppInstService",
+	"options": {		
+		"config": {
+			"app_id": 9,
+			"version_id": 9,		
+			"service_name": "otocloud-app-inst",
+			"app_desc": "应用实例服务",
+			"isolation_vertx_pool": false,
+			"api_register_server": {
+				"webserver_name": "121webserver-N01"
+			},
+			"sessionservice_config": {
+				"expire_seconds": 1800,
+				"redis_options": {
+					"host": "127.0.0.1",
+					"port": 6379
+				}
+			},				
+			"sys_datasource": {
+				"config": {
+					"max_pool_size": 30,
+					"user": "root",
+					"password": "root",
+					"driver_class": "com.mysql.jdbc.Driver",
+					"url": "jdbc:mysql://127.0.0.1:3306/121db_new?useUnicode=true&characterEncoding=UTF-8"
+				},
+				"sharedpool": "jdbc-ocr"
+			},						
+		  "component_config": { 
+
+ 	 	  },
+ 	 	  
+			"component_deployment": [
+			],
+			"component_common": {
+			}
+		}
+	}
+}
