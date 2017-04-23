@@ -7,8 +7,8 @@ import io.vertx.ext.sql.UpdateResult;
 import otocloud.app.inst.dao.AppInstDAO;
 import otocloud.common.ActionURI;
 import otocloud.framework.common.IgnoreAuthVerify;
+import otocloud.framework.core.CommandMessage;
 import otocloud.framework.core.HandlerDescriptor;
-import otocloud.framework.core.OtoCloudBusMessage;
 import otocloud.framework.core.OtoCloudComponentImpl;
 import otocloud.framework.core.OtoCloudEventHandlerImpl;
 
@@ -69,7 +69,7 @@ public class AppInstStartupHandler extends OtoCloudEventHandlerImpl<JsonObject> 
 	 * }
 	 */
 	@Override
-	public void handle(OtoCloudBusMessage<JsonObject> msg) {
+	public void handle(CommandMessage<JsonObject> msg) {
 		
 		JsonObject content = msg.body().getJsonObject("content");
 		
